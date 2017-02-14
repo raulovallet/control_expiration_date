@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Inherit Form View to Modify it -->
+        <record id="control_expiration_date_res_company_view" model="ir.ui.view">
+            <field name="name">Control expiration date res company view</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+
+                    <xpath expr="//page[@name='configuration']/group" position="inside">
+                        <!-- Add your fields or attributes here -->
+
+                        <group name="sale_validity">
+                            <field name="days_validity_date"/>
+                        </group>
+                    </xpath>
+
+
+
+
+
+            </field>
+        </record>
+
+
+
+    </data>
+</openerp>
